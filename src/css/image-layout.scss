@@ -1,0 +1,144 @@
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.img-box {
+  position: relative;
+  &.length2 {
+    div {
+      @include wh(49.5%, 100%);
+      &:first-child {
+        left: 0; top: 0;
+      }
+      &:last-child {
+        right: 0; top: 0;
+      }
+    }
+  }
+  &.length3 {
+    div {
+      width: 49.5%;
+      &:first-child {
+        height: 100%; left: 0; top: 0;
+      }
+      &:nth-child(2) {
+        height: 49.5%; right: 0; top: 0;
+      }
+      &:last-child {
+        height: 49.5%; right: 0; bottom: 0;
+      }
+    }
+  }
+  &.length4 {
+    div {
+      @include wh(49.5%, 49.5%);
+      &:nth-child(2n+1) {
+        left: 0;
+      }
+      &:nth-child(2n) {
+        right: 0;
+      }
+      &:nth-child(n + 3) {
+        bottom: 0;
+      }
+    }
+  }
+  &.length5 {
+    div {
+      @include wh(33%, 33%);
+      &:nth-child(1) {
+        height: 66.5%;
+      }
+      &:nth-child(3n + 1) {
+        width: 66.5%;
+      }
+      &:nth-child(2), &:nth-child(3), &:nth-child(5) {
+        right: 0;
+      }
+      &:nth-child(n + 4) {
+        bottom: 0;
+      }
+      &:nth-child(3) {
+        top: 33.5%;
+      }
+    }
+  }
+  &.length6 {
+    div {
+      @include wh(33%, 33%);
+      &:first-child {
+        @include wh(66.5%, 66.5%);
+      }
+      &:nth-child(2), &:nth-child(3), &:nth-child(6) {
+        right: 0;
+      }
+      &:nth-child(n + 4) {
+        bottom: 0;
+      }
+      &:nth-child(3) {
+        top: 33.5%;
+      }
+      &:nth-child(5) {
+        left: 33.5%;
+      }
+    }
+  }
+  &.length7 {
+    div {
+      @include wh(33%, 33%);
+      &:nth-child(-n + 2) {
+        height: 66.5%;
+      }
+      &:nth-child(n + 5) {
+        bottom: 0;
+      }
+      &:nth-child(4n + 2) {
+        left: 33.5%;
+      }
+      &:nth-child(3), &:nth-child(4), &:nth-child(7) {
+        right: 0;
+      }
+      &:nth-child(4) {
+        top: 33.5%;
+      }
+    }
+  }
+  &.length8 {
+    div {
+      @include wh(33%, 33%);
+      &:nth-child(1) {
+        width: 66.5%;
+      }
+      &:nth-child(n + 3):nth-child(-n + 5) {
+        top: 33.5%;
+      }
+      &:nth-child(n + 6) {
+        bottom: 0;
+      }
+      &:nth-child(3n + 2) {
+        right: 0;
+      }
+      &:nth-child(3n + 4) {
+        left: 33.5%;
+      }
+    }
+  }
+  &.length9 {
+    div {
+      @include wh(33%, 33%);
+      &:nth-child(3n + 2) {
+        left: 33.5%;
+      }
+      &:nth-child(3n) {
+        right: 0;
+      }
+      &:nth-child(n + 4):nth-child(-n + 6) {
+        top: 33.5%;
+      }
+      &:nth-child(n + 7) {
+        bottom: 0;
+      }
+    }
+  }
+ }
