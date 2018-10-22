@@ -35,6 +35,10 @@ module.exports = {
         target: 'http://mitu.108usd.com',
         changeOrigin: true,
       },
+      '/live': {
+        target: 'http://mitu.108usd.com',
+        changeOrigin: true,
+      },
     }
   },
   resolve: {

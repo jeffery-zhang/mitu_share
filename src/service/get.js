@@ -12,8 +12,11 @@ export default function () {
       .then(res => res.data);
   };
   return {
-    getWorkInfo(params) {
-      return getFunction('/work/info', params);
+    getWorkInfo(workId) {
+      return getFunction('/work/info', { workId });
+    },
+    getLiveInfo(liveId) {
+      return getFunction('/live/info', { liveId });
     },
   };
 };
